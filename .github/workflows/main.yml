@@ -15,5 +15,5 @@ jobs:
           port: ${{ secrets.ftp_port }}
           user: ${{ secrets.ftp_user }}
           pass: ${{ secrets.ftp_password }}
-          remoteDir: "/public_html/test"
+          remoteDir: "/home/u65831p62560/domains/paulbrederveld.nl/public_html/test"
           reverse: true
