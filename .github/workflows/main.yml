@@ -9,11 +9,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: pressidium/lftp-mirror-action@v1
         with:
-          server: ${{ secrets.ftp_server }}
+          host: ${{ secrets.ftp_server }}
           port: ${{ secrets.ftp_port }}
-          username: ${{ secrets.ftp_user }}
-          password: ${{ secrets.ftp_password }}
-          server-dir: "public_html/test/"
-
+          user: ${{ secrets.ftp_user }}
+          pass: ${{ secrets.ftp_password }}
+          remoteDir: "/public_html/test"
+          reverse: true
